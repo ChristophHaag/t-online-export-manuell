@@ -1,0 +1,35 @@
+Anrede, ADR_strSalut
+Vorname, ADR_strFirstName
+Nachname, ADR_strLastName
+E-Mail-Adresse, ADR_strMailAddress
+E-Mail 2: Adresse, ADR_strSndMailAddress
+Straße (privat), ADR_strStreet
+Postleitzahl (privat), ADR_strPCode
+Ort (privat), ADR_strCity
+Bundesland (privat), ADR_strState
+Land (privat), ADR_strCountry
+Telefon (privat), ADR_strVoiceAddress
+Telefon privat 2, ADR_strSndVoiceAddress
+Mobiltelefon, ADR_strMobileAddress
+Fax (privat), ADR_strFAXAddress
+UM-Nr., ADR_strUMS
+Webseite (privat), ADR_strHomepage
+Titel, ADR_strWorkTitle
+Position, ADR_strWorkPosition
+Firma, ADR_strWorkCompany
+E-Mail 3: Adresse, ADR_strWorkMailAddress
+Webseite (geschäftlich), ADR_strWorkHomepage
+Straße (geschäftlich), ADR_strWorkStreet
+Postleitzahl (geschäftlich), ADR_strWorkPCode
+Ort (geschäftlich), ADR_strWorkCity
+Bundesland (geschäftlich), ADR_strWorkState
+Land (geschäftlich), ADR_strWorkCountry
+Telefon (geschäftlich), ADR_strWorkVoiceAddress
+Telefon geschäftlich 2, ADR_strWorkSndVoiceAddress
+Mobiltelefon 2, ADR_strWorkMobileAddress
+Fax (geschäftlich), ADR_strWorkFAXAddress
+UM-Nr. (geschäftlich), ADR_strWorkUMS
+T-Online Nick, ADR_strNickName
+Kommentare, ADR_mAnnotation
+Geburtstag, ADR_strBirthday
+Jahrestag, ADR_strAnniversary

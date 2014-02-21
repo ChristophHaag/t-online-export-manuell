@@ -1,0 +1,57 @@
+Die Addressbook.fdb Datei im T-Online Email 6.0 Verzeichnis ist eine Microsoft Access Datenbank.
+
+Exportieren kann man sie mit Software wie mdbtools: http://sourceforge.net/projects/mdbtools/, aber soweit ich gesehen habe, nur die einzelnen Tabellen: mdb-export Addressbook.fdb tblAddress > addresses.csv
+
+mdb-sqlite exportiert die ganze Datenbank direkt zu einer sqlite Datenbank http://code.google.com/p/mdb-sqlite/
+Dies hat den Vorteil, dass die Gruppen erhalten bleiben und z.B. mit
+
+SELECT * FROM tbladdress LEFT JOIN tblgroupmember ON tblgroupmember.MEM_ADR_ID = tbladdress.ADR_ID LEFT JOIN tblgroup on tblgroup.GRP_ID = tblgroupmember.MEM_GRP_ID ORDER BY tblgroup.GRP_Name;
+
+mit exportiert werden können, am Besten im CSV Format.
+
+Um die Adressen in den T-Online Webmail Client zu importieren, muss die CSV Datei, die man importiert, das "richtige" Format haben.
+
+Das Mapping dafür habe ich mir so zusammenkopiert. Rechts sind die Spaltennamen aus der Access Datenbank, Links die Spaltennamen, die der T-Online Webclient will.
+
+Anrede, ADR_strSalut
+Vorname, ADR_strFirstName
+Nachname, ADR_strLastName
+E-Mail-Adresse, ADR_strMailAddress
+E-Mail 2: Adresse, ADR_strSndMailAddress
+Straße (privat), ADR_strStreet
+Postleitzahl (privat), ADR_strPCode
+Ort (privat), ADR_strCity
+Bundesland (privat), ADR_strState
+Land (privat), ADR_strCountry
+Telefon (privat), ADR_strVoiceAddress
+Telefon privat 2, ADR_strSndVoiceAddress
+Mobiltelefon, ADR_strMobileAddress
+Fax (privat), ADR_strFAXAddress
+UM-Nr., ADR_strUMS
+Webseite (privat), ADR_strHomepage
+Titel, ADR_strWorkTitle
+Position, ADR_strWorkPosition
+Firma, ADR_strWorkCompany
+E-Mail 3: Adresse, ADR_strWorkMailAddress
+Webseite (geschäftlich), ADR_strWorkHomepage
+Straße (geschäftlich), ADR_strWorkStreet
+Postleitzahl (geschäftlich), ADR_strWorkPCode
+Ort (geschäftlich), ADR_strWorkCity
+Bundesland (geschäftlich), ADR_strWorkState
+Land (geschäftlich), ADR_strWorkCountry
+Telefon (geschäftlich), ADR_strWorkVoiceAddress
+Telefon geschäftlich 2, ADR_strWorkSndVoiceAddress
+Mobiltelefon 2, ADR_strWorkMobileAddress
+Fax (geschäftlich), ADR_strWorkFAXAddress
+UM-Nr. (geschäftlich), ADR_strWorkUMS
+T-Online Nick, ADR_strNickName
+Kommentare, ADR_mAnnotation
+Geburtstag, ADR_strBirthday
+Jahrestag, ADR_strAnniversary
+
+mit dem convert-csv.py script und mapping.csv und der vorher Exportierten Datenbank lassen sich die Kontakte nun so in das vom T-Online Web-Adressbuch akzeptierten Format konvertieren:
+
+python2 convert-csv.py adressen-export.csv
+
+Dies erstellt die Datei adressen-export.csv.converted.csv, die als Quelle für den Import bei T-Online angegeben werden kann.
+
