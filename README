@@ -1,0 +1,5 @@
+Wer immer noch die T-Online Software 6.0 benutzt, kennt das Problem vielleicht: Der Email Client stürzt mit "abnormal Termination" ab, bevor man an die Benutzeroberfläche kommt, um das Addressbuch und die Emails zu exportieren, weil T-Online es anscheinend nicht geschafft hat, das Addressbuch mit ihren Mailservern zu synchronisieren.
+
+Im Internet findet man leider auch fast nur Leute, die sich darüber beschweren, dass die Software nicht richtig funktioniert, aber eigentlich nichts, wie man denn nun an die Daten herankommt, wenn man zu besserer Software wechseln will.
+
+Deshalb habe ich hier in addressbook.txt ein wenig aufgeschrieben, wie man an das Adressbuch herankommt, wenn die Software nicht mehr startet. Ich habe das ganze unter Linux gemacht, unter Windows geht das mit Access eventuell auch einfacher, wenn man es denn gekauft hat.
