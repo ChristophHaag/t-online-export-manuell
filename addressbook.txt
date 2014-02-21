@@ -53,5 +53,5 @@ mit dem convert-csv.py script und mapping.csv und der vorher Exportierten Datenb
 
 python2 convert-csv.py adressen-export.csv
 
-Dies erstellt die Datei adressen-export.csv.converted.csv, die als Quelle für den Import bei T-Online angegeben werden kann.
+Dies erstellt Dateien, die nach dem Schema originaldateiname-gruppenname.csv benannt sind. Diese Dateien können als Quelle für den Import bei T-Online angegeben werden kann.
 
