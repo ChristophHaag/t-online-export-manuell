@@ -38,6 +38,7 @@ with open(sys.argv[1], 'rb') as f:
     # to every file
     for w in groupwrite.values():
         w.writerow(header)
+    nogroupwrite.writerow(header)
 
     for row in r:
         # dict keys will still be sorted like when writing the header
